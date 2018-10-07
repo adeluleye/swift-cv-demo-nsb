@@ -45,11 +45,12 @@ class ViewController: UICollectionViewController, UICollectionViewDelegateFlowLa
     }
     
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 6
+        return teams.count
     }
     
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: cellId, for: indexPath) as! TeamCell
+        cell.team = teams[indexPath.item]
         return cell
     }
     
@@ -64,6 +65,17 @@ class ViewController: UICollectionViewController, UICollectionViewDelegateFlowLa
 }
 
 class TeamCell: UICollectionViewCell {
+    
+    var team: Team? {
+        didSet {
+            guard let teamImage = team?.image else { return }
+            guard let teamName = team?.name else { return }
+            
+            teamImageView.image = UIImage(named: teamImage)
+            teamNameLabel.text = teamName
+        }
+    }
+    
     
     override init(frame: CGRect) {
         super.init(frame: frame)
