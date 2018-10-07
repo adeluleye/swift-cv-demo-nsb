@@ -49,6 +49,7 @@ class TeamCell: UICollectionViewCell {
     override init(frame: CGRect) {
         super.init(frame: frame)
         setup()
+        setCellShadow()
     }
     
     required init?(coder aDecoder: NSCoder) {
