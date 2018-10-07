@@ -61,6 +61,10 @@ class TeamCell: UICollectionViewCell {
         addSubview(teamImageView)
         addSubview(teamNameLabel)
         
+        teamImageView.setAnchor(top: topAnchor, topPad: 10, bottom: nil, bottomPad: 0, left: leftAnchor, leftPad: 10, right: rightAnchor, rightPad: 10, height: 50, width: 0)
+        
+        teamNameLabel.setAnchor(top: teamImageView.bottomAnchor, topPad: 10, bottom: bottomAnchor, bottomPad: 0, left: leftAnchor, leftPad: 0, right: rightAnchor, rightPad: 0, height: 0, width: 0)
+        
     }
     
     let teamImageView: UIImageView = {
