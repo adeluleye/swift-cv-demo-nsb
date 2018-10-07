@@ -10,15 +10,14 @@ import UIKit
 
 extension UIView {
     
-    func setDefaultShadow() {
+    func setCellShadow() {
         self.layer.shadowColor = UIColor.black.cgColor
         self.layer.shadowOffset = CGSize(width: 0, height: 1)
         self.layer.shadowOpacity = 1
-        self.layer.shadowRadius = 2.0
+        self.layer.shadowRadius = 1.0
         self.layer.masksToBounds = false
         self.clipsToBounds = false
-        self.layer.masksToBounds = false
-        self.layer.cornerRadius = 4
+        self.layer.cornerRadius = 3
     }
     
     func setAnchor(width: CGFloat, height: CGFloat) {
