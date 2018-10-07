@@ -75,8 +75,3 @@ class ViewController: UICollectionViewController, UICollectionViewDelegateFlowLa
     
 }
 
-struct Team {
-    let image: String?
-    let name: String?
-}
-
