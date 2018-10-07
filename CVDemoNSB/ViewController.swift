@@ -43,10 +43,10 @@ class ViewController: UICollectionViewController, UICollectionViewDelegateFlowLa
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        collectionView?.backgroundColor = UIColor(red: 44/255, green: 57/255, blue: 95/255, alpha: 1)
+        collectionView?.backgroundColor = UIColor(r: 44, g: 57, b: 95)
         
         navigationItem.title = "Collection View"
-        navigationController?.navigationBar.barTintColor = UIColor(red: 217/255, green: 48/255, blue: 80/255, alpha: 1)
+        navigationController?.navigationBar.barTintColor = UIColor(r: 217, g: 48, b: 80)
         
         navigationController?.navigationBar.titleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.white, .font: UIFont.boldSystemFont(ofSize: 20)]
         

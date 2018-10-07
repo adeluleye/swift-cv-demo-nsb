@@ -32,7 +32,7 @@ class TeamCell: UICollectionViewCell {
     }
     
     func setup() {
-        backgroundColor = UIColor(red: 11/255, green: 22/255, blue: 53/255, alpha: 1)
+        backgroundColor = UIColor(r: 11, g: 22, b: 53)
         
         addSubview(teamImageView)
         addSubview(teamNameLabel)
