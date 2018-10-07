@@ -56,8 +56,29 @@ class TeamCell: UICollectionViewCell {
     }
     
     func setup() {
-        backgroundColor = .red
+        backgroundColor = UIColor(red: 11/255, green: 22/255, blue: 53/255, alpha: 1)
+        
+        addSubview(teamImageView)
+        addSubview(teamNameLabel)
+        
     }
+    
+    let teamImageView: UIImageView = {
+        let image = UIImage(named: "")
+        let imageView = UIImageView(image: image)
+        imageView.contentMode = .scaleAspectFit
+        imageView.backgroundColor = .green
+        return imageView
+    }()
+    
+    let teamNameLabel: UILabel = {
+        let label = UILabel(frame: .zero)
+        label.font = UIFont.boldSystemFont(ofSize: 16)
+        label.text = "Name"
+        label.textColor = UIColor.white
+        label.textAlignment = .center
+        return label
+    }()
     
 }
 
