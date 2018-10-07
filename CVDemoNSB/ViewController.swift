@@ -29,7 +29,16 @@ class ViewController: UICollectionViewController, UICollectionViewDelegateFlowLa
                  Team(image: "mu", name: "Man Utd"),
                  Team(image: "mc", name: "Man City"),
                  Team(image: "newcastle", name: "Newcastle"),
-                 Team(image: "tottenham", name: "Tottenham"),]
+                 Team(image: "tottenham", name: "Tottenham"),
+                 Team(image: "arsenal", name: "Arsenal"),
+                 Team(image: "chelsea", name: "Chelsea"),
+                 Team(image: "everton", name: "Everton"),
+                 Team(image: "leicester", name: "Leicester"),
+                 Team(image: "liverpool", name: "Liverpool"),
+                 Team(image: "mu", name: "Man Utd"),
+                 Team(image: "mc", name: "Man City"),
+                 Team(image: "newcastle", name: "Newcastle"),
+                 Team(image: "tottenham", name: "Tottenham")]
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -42,6 +51,8 @@ class ViewController: UICollectionViewController, UICollectionViewDelegateFlowLa
         navigationController?.navigationBar.titleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.white, .font: UIFont.boldSystemFont(ofSize: 20)]
         
         collectionView.register(TeamCell.self, forCellWithReuseIdentifier: cellId)
+        
+        collectionView.showsVerticalScrollIndicator = false
     }
     
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
@@ -103,7 +114,6 @@ class TeamCell: UICollectionViewCell {
         let image = UIImage(named: "")
         let imageView = UIImageView(image: image)
         imageView.contentMode = .scaleAspectFit
-        imageView.backgroundColor = .green
         return imageView
     }()
     
